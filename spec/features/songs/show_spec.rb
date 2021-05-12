@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'songs show' do
   before(:each) do
+    artist = Artist.create(name: 'Carly Rae Jepsen')
     @song_1 = Song.create!(title:       "I Really Like You",
                          length:      208,
                          play_count:  243810867)
@@ -13,7 +14,7 @@ RSpec.describe 'songs show' do
   it 'displays the song title' do
     visit "/songs/#{@song_1.id}"
 
-
+    expect(page).
   end
 
   # it 'displays the song title' do

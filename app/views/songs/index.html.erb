@@ -2,4 +2,6 @@
 
 <% @songs.each do |song|%>
   <h3><%= song.title %></h3>
+  <p>Play Count: <%= song.length %></p>
+  <p>Length: <%= song.play_count %></p>
 <% end %>

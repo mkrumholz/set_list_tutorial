@@ -1,3 +1,7 @@
 class Artist < ApplicationRecord
   has_many :songs
-end 
+
+  def average_song_length
+    self.songs.average(:length)
+  end
+end
